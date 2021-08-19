@@ -10,7 +10,6 @@ function Home() {
     <>
       <div className={styles.headerhero}>
         <div className={styles.headerbg}>
-          {" "}
           <img src="../images/Boat.jpg" alt="Background" />
         </div>
         <div className={styles.headercontent}>
@@ -32,19 +31,12 @@ function Home() {
 
       <section className={styles.products}>
         <div className={styles.container}>
-          <div class={styles.productsheader}>
+          <div className={styles.productsheader}>
             <h2>popular products</h2>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
-          </div>
-          <div className={styles.product}>
-            <figure>
-              <img src="../images/collection2.jpg" alt="product" />
-              <figcaption>cold fashion</figcaption>
-              <figcaption>$ 56.00</figcaption>
-            </figure>
           </div>
           <div className={styles.product}>
             <figure>
@@ -55,9 +47,9 @@ function Home() {
           </div>
           <div className={styles.product}>
             <figure>
-              <img src="../images/collection4.jpg" alt="product" />
-              <figcaption>women fashion</figcaption>
-              <figcaption>$ 48.00</figcaption>
+              <img src="../images/collection2.jpg" alt="product" />
+              <figcaption>cold fashion</figcaption>
+              <figcaption>$ 56.00</figcaption>
             </figure>
           </div>
           <div className={styles.product}>
@@ -67,11 +59,19 @@ function Home() {
               <figcaption>$ 89.00</figcaption>
             </figure>
           </div>
+
+          <div className={styles.product}>
+            <figure>
+              <img src="../images/collection4.jpg" alt="product" />
+              <figcaption>women fashion</figcaption>
+              <figcaption>$ 48.00</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
       <section className={styles.blog}>
-        <div className={styles.container}>
+        <div className={styles.blogcontainer}>
           <div className={styles.blogheader}>
             <h2>latest from blog</h2>
             <p>

@@ -150,7 +150,7 @@
   margin-bottom: 3rem;
 }
 
-.products .container .productsheader h2 {
+.productsheader h2 {
   padding: 2rem 1rem;
   text-transform: uppercase;
   font-family: "Franklin Gothic Medium";
@@ -162,7 +162,7 @@
   text-align: center;
 }
 
-.products .container .productsheader p {
+.productsheader p {
   font-family: Cambria;
   color: rgba(89, 89, 89, 1);
   font-size: 1rem;
@@ -176,7 +176,8 @@
   display: inline-block;
   font-size: 16px;
   text-align: center;
-  padding: 1.8rem;
+  padding: 0rem;
+  margin: 0px;
   -webkit-transform: scale(1);
   transform: scale(1);
   opacity: 1;
@@ -219,7 +220,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-  products .container .product {
+  .products .container .product {
     width: 50%;
     padding: 2rem;
   }
@@ -244,18 +245,18 @@
   padding: 3rem 0rem 6rem;
 }
 
-.blog .container {
+.blog .blogcontainer {
   margin: 0 auto;
   width: 80%;
   background-color: #f2f2f2;
 }
 
-.blog .container .blogheader {
+.blog .blogcontainer .blogheader {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.blog .container .blogheader h2 {
+.blog .blogcontainer .blogheader h2 {
   padding: 2rem 1rem;
   text-transform: uppercase;
   font-family: "Franklin Gothic Medium";
@@ -267,7 +268,7 @@
   text-align: center;
 }
 
-.blog .container .blogheader p {
+.blog .blogcontainer .blogheader p {
   font-family: Cambria;
   color: rgba(89, 89, 89, 1);
   font-size: 1rem;
@@ -276,13 +277,13 @@
   text-align: center;
 }
 
-.blog .container .blogcontent {
+.blog .blogcontainer .blogcontent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.blog .container .blogcontent .blog1 {
+.blog .blogcontainer .blogcontent .blog1 {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -293,18 +294,18 @@
   padding-left: 5%;
 }
 
-.blog .container .blogcontent .blog1 .blog1imageholder {
+.blog .blogcontainer .blogcontent .blog1 .blog1imageholder {
   width: 45%;
   height: auto;
   font-size: 16px;
 }
 
-.blog .container .blogcontent .blog1 .blog1imageholder img {
+.blog .blogcontainer .blogcontent .blog1 .blog1imageholder img {
   width: 100%;
   height: auto;
 }
 
-.blog .container .blogcontent .blog1 .blog1content {
+.blog .blogcontainer .blogcontent .blog1 .blog1content {
   width: 50%;
   background-color: #fff;
   margin-left: -10%;
@@ -314,7 +315,7 @@
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
 }
 
-.blog .container .blogcontent .blog1 .blog1content h4 {
+.blog .blogcontainer .blogcontent .blog1 .blog1content h4 {
   text-transform: uppercase;
   color: #999999;
   font-weight: 400;
@@ -322,18 +323,18 @@
   margin-bottom: 1rem;
 }
 
-.blog .container .blogcontent .blog1 .blog1content h3 {
+.blog .blogcontainer .blogcontent .blog1 .blog1content h3 {
   text-transform: uppercase;
   padding-bottom: 6%;
 }
 
-.blog .container .blogcontent .blog1 .blog1content p.description {
+.blog .blogcontainer .blogcontent .blog1 .blog1content p.description {
   font-family: Cambria;
   font-style: italic;
   padding-bottom: 8%;
 }
 
-.blog .container .blogcontent .blog1 .blog1content p.button {
+.blog .blogcontainer .blogcontent .blog1 .blog1content p.button {
   width: 50%;
   text-align: center;
   font-size: 0.7rem;
@@ -346,7 +347,7 @@
   box-shadow: 0px 1px 3.84px 0.16px rgba(0, 0, 0, 0.35);
 }
 
-.blog .container .blogcontent .blog1 .blog1content p.button:hover {
+.blog .blogcontainer .blogcontent .blog1 .blog1content p.button:hover {
   cursor: pointer;
   background-color: #ffffff;
   color: rgba(166, 20, 88, 0.8);
@@ -358,7 +359,7 @@
   transition: color 400ms ease-in-out 0s;
 }
 
-.blog .container .blogcontent .blog2 {
+.blog .blogcontainer .blogcontent .blog2 {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -369,17 +370,17 @@
   padding-left: 5%;
 }
 
-.blog .container .blogcontent .blog2 .blog2imageholder {
+.blog .blogcontainer .blogcontent .blog2 .blog2imageholder {
   width: 45%;
   height: auto;
 }
 
-.blog .container .blogcontent .blog2 .blog2imageholder img {
+.blog .blogcontainer .blogcontent .blog2 .blog2imageholder img {
   width: 100%;
   height: auto;
 }
 
-.blog .container .blogcontent .blog2 .blog2content {
+.blog .blogcontainer .blogcontent .blog2 .blog2content {
   width: 50%;
   background-color: #fff;
   margin-left: -10%;
@@ -389,7 +390,7 @@
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
 }
 
-.blog .container .blogcontent .blog2 .blog2content h4 {
+.blog .blogcontainer .blogcontent .blog2 .blog2content h4 {
   text-transform: uppercase;
   color: #999999;
   font-weight: 400;
@@ -397,18 +398,18 @@
   margin-bottom: 1rem;
 }
 
-.blog .container .blogcontent .blog2 .blog2content h3 {
+.blog .blogcontainer .blogcontent .blog2 .blog2content h3 {
   text-transform: uppercase;
   padding-bottom: 6%;
 }
 
-.blog .container .blogcontent .blog2 .blog2content p.description {
+.blog .blogcontainer .blogcontent .blog2 .blog2content p.description {
   font-family: Cambria;
   font-style: italic;
   padding-bottom: 8%;
 }
 
-.blog .container .blogcontent .blog2 .blog2content p.button {
+.blog .blogcontainer .blogcontent .blog2 .blog2content p.button {
   width: 50%;
   text-align: center;
   font-size: 0.7rem;
@@ -421,7 +422,7 @@
   box-shadow: 0px 1px 3.84px 0.16px rgba(0, 0, 0, 0.35);
 }
 
-.blog .container .blogcontent .blog2 .blog2content p.button:hover {
+.blog .blogcontainer .blogcontent .blog2 .blog2content p.button:hover {
   cursor: pointer;
   background-color: #ffffff;
   color: rgba(166, 20, 88, 0.8);
@@ -434,7 +435,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  .blog .container .blogcontent {
+  .blog .blogcontainer .blogcontent {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -443,22 +444,22 @@
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  .blog .container .blogcontent .blog1 {
+  .blog .blogcontainer .blogcontent .blog1 {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
     margin-bottom: 8%;
   }
-  .blog .container .blogcontent .blog2 {
+  .blog .blogcontainer .blogcontent .blog2 {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
   }
-  .blog .container .blogcontent .blog1 .blog1imageholder {
+  .blog .blogcontainer .blogcontent .blog1 .blog1imageholder {
     width: 45%;
     height: auto;
     font-size: 16px;
     margin-left: 5%;
   }
-  .blog .container .blogcontent .blog2 .blog-2imageholder {
+  .blog .blogcontainer .blogcontent .blog2 .blog-2imageholder {
     width: 45%;
     height: auto;
     font-size: 16px;
@@ -467,7 +468,7 @@
 }
 
 @media only screen and (max-width: 480px) {
-  .blog .container .blogcontent .blog1 {
+  .blog .blogcontainer .blogcontent .blog1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

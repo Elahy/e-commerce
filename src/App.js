@@ -21,6 +21,8 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   title: {
+    textDecoration: "none",
+    fontStyle: "inherit",
     flexGrow: 1,
   },
 }));
@@ -36,21 +38,28 @@ function App() {
       <header className="App-header">
         <AppBar position="static" color="transparent">
           <Toolbar>
+            <IconButton
+              edge="start"
+              className={classes.menuButton}
+              color="black"
+              aria-label="menu"
+            >
+              <MenuIcon />
+            </IconButton>
             <img className="logo" src="../images/logo.png" alt="logo" />
 
             <Typography variant="h6" className={classes.title}>
               <Link to="/">Home</Link>
             </Typography>
-            <Button color="inherit">Login</Button>
-            <IconButton
-              onClick={handlelogin}
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="menu"
-            >
-              <MenuIcon />
-            </IconButton>
+            <Typography variant="h6" className={classes.title}>
+              <Link to="/">Sale!</Link>
+            </Typography>
+            <Typography variant="h6" className={classes.title}>
+              <Link to="/">Contact</Link>
+            </Typography>
+            <Button onClick={handlelogin} variant="contained" color="primary">
+              Login
+            </Button>
           </Toolbar>
         </AppBar>
       </header>
