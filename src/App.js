@@ -33,6 +33,9 @@ function App() {
   const handlelogin = () => {
     history.push("/login");
   };
+  const handleClick = () => {
+    history.push("/");
+  };
   return (
     <>
       <header className="App-header">
@@ -46,17 +49,26 @@ function App() {
             >
               <MenuIcon />
             </IconButton>
-            <img className="logo" src="../images/logo.png" alt="logo" />
+            <img
+              className="logo"
+              src="../images/logo.png"
+              alt="logo"
+              onClick={handleClick}
+            />
 
             <Typography variant="h6" className={classes.title}>
-              <Link to="/">Home</Link>
+              <Link to="/products">PRODUCTS</Link>
             </Typography>
             <Typography variant="h6" className={classes.title}>
-              <Link to="/">Sale!</Link>
+              <Link to="/">SALE!</Link>
             </Typography>
             <Typography variant="h6" className={classes.title}>
-              <Link to="/">Contact</Link>
+              <Link to="/">BLOG</Link>
             </Typography>
+            <Typography variant="h6" className={classes.title}>
+              <Link to="/">CONTACT</Link>
+            </Typography>
+            <img className="cartSign" src="../images/cart.png" alt="cartSign" />
             <Button onClick={handlelogin} variant="contained" color="primary">
               Login
             </Button>

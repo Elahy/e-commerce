@@ -13,7 +13,7 @@ function Home() {
           <img src="../images/Boat.jpg" alt="Background" />
         </div>
         <div className={styles.headercontent}>
-          <p className={styles.heading1}>fashion collection 2021</p>
+          <p className={styles.heading1}>Style Collection 2021</p>
           <h1>
             wellcome to brand<span className={styles.logostyle}>y</span> unique
             store
