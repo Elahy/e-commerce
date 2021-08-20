@@ -13,6 +13,7 @@ import Login from "./components/Login";
 import { useHistory } from "react-router";
 import { Menu, MenuItem } from "@material-ui/core";
 import SignUp from "./components/SignUp";
+import ProductDetails from "./components/ProductDetails";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -139,6 +140,9 @@ function App() {
           </Route>
           <Route path="/signup">
             <SignUp />
+          </Route>
+          <Route path="/product/:id">
+            <ProductDetails />
           </Route>
           <Route path="/PrivacyPolicy">
             <Policy />

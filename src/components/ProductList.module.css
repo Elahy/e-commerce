@@ -1,6 +1,12 @@
 .productList {
   padding: 10px;
-  align-content: center;
+  /* align-content: center; */
   position: relative;
   display: inline-block;
+}
+
+@media screen and (min-width: 1200px) {
+  .productList {
+    margin: 0.2% 2%;
+  }
 }

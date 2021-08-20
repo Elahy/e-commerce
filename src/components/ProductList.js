@@ -43,13 +43,13 @@ function ProductList() {
   const buttonHanlder = (e) => {
     console.log(e, "===event");
     dispatch(setCurrentProduct(e));
-    history.push(`/product/${e}`);
+    history.push(`/product/${e._id}`);
   };
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={1} lg={1}></Grid>
-        <Grid item xs={10} lg={3}>
+        <Grid item xs={10} lg={10}>
           {productList.map((product, index) => (
             <div key={index} className={styles.productList}>
               <Card className={classes.card}>
@@ -77,7 +77,7 @@ function ProductList() {
                     ADD TO CART
                   </Button>
                   <Button
-                    onClick={() => buttonHanlder(product.id)}
+                    onClick={() => buttonHanlder(product)}
                     className={classes.detailsButton}
                     variant="contained"
                     color="primary"

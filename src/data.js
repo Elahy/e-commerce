@@ -2,10 +2,10 @@ const data = {
   products: [
     {
       _id: "1",
-      name: "Owl Pandant/Necklace",
-      category: "Necklace",
+      name: "Simple Letter Cover",
+      category: "Envelope",
       image: "/images/p1.jpg",
-      price: "180tk",
+      price: "50tk",
       countInStock: 21,
       brand: "Aliexpress",
       rating: 4.5,
@@ -38,8 +38,8 @@ const data = {
     },
     {
       _id: "4",
-      name: "Pandent Earring",
-      category: "Earrings",
+      name: "Square Envelope Set",
+      category: "Envelope",
       image: "/images/p4.jpg",
       price: "140tk",
       countInStock: 52,
@@ -62,7 +62,7 @@ const data = {
     },
     {
       _id: "6",
-      name: "Single Wing Pandent/Necklace",
+      name: "Single Wing Necklace",
       category: "Necklace",
       image: "/images/p6.jpg",
       price: "150tk",
@@ -110,7 +110,7 @@ const data = {
     },
     {
       _id: "10",
-      name: "Crystal & Round Necklace",
+      name: "Crystal-Round Necklace",
       category: "Necklace",
       image: "/images/p10.jpg",
       price: "320tk",
