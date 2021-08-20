@@ -113,7 +113,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className={styles.contact}>
+      <section className={styles.contact} id="contact">
         <div className={styles.container}>
           <h4>cantact us</h4>
           <p>41/A High Street, Dhanmondi, Dhaka</p>

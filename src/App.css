@@ -70,10 +70,13 @@ code {
     display: none;
   }
   .logo {
-    margin: 0 0 0 0.5%;
+    margin: 0 5% 0 2%;
   }
   .loginButton {
     display: none;
+  }
+  .cartSign {
+    margin-left: 5%;
   }
 }
 

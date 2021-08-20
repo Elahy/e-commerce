@@ -1,7 +1,8 @@
 import { Grid, Paper, makeStyles, TextField } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Login.module.css";
+import { useHistory } from "react-router";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,9 +22,25 @@ const useStyles = makeStyles((theme) => ({
 
 function Login() {
   const classes = useStyles();
+  const history = useHistory();
+  const [credential, setCredential] = useState({ email: "", password: "" });
+  const user = {
+    email: "admin@gmail.com",
+    password: "admin123",
+  };
+  const [error, setError] = useState(false);
 
-  const submitHandler = () => {
-    alert("logged");
+  const submitHandler = (e) => {
+    e.preventDefault();
+    if (
+      credential.email === user.email &&
+      credential.password === user.password
+    ) {
+      history.push("/");
+    } else {
+      setError(true);
+    }
+    console.log(credential);
   };
   return (
     <div className={classes.root}>
@@ -33,6 +50,7 @@ function Login() {
           <Paper className={classes.paper}>
             <form onSubmit={submitHandler} className={styles.card}>
               <h1>Login</h1>
+              {error ? <p>Email or password didn't match!</p> : null}
               <TextField
                 required
                 id="outlined-required"
@@ -40,6 +58,13 @@ function Login() {
                 type="email"
                 variant="outlined"
                 className={classes.field}
+                onChange={(e) =>
+                  setCredential(
+                    { ...credential, email: e.target.value },
+                    setError(false)
+                  )
+                }
+                value={credential.email}
               />
               <br />
               <TextField
@@ -49,9 +74,16 @@ function Login() {
                 type="password"
                 variant="outlined"
                 className={classes.field}
+                onChange={(e) =>
+                  setCredential(
+                    { ...credential, password: e.target.value },
+                    setError(false)
+                  )
+                }
+                value={credential.password}
               />
               <p>
-                New user? Sign up <Link to="/Signup">Here!</Link>
+                New user? Sign up <Link to="/signup">Here!</Link>
               </p>
               <br />
               <input

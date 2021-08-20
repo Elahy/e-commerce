@@ -12,6 +12,7 @@ import Policy from "./components/Policy";
 import Login from "./components/Login";
 import { useHistory } from "react-router";
 import { Menu, MenuItem } from "@material-ui/core";
+import SignUp from "./components/SignUp";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -58,7 +59,6 @@ function App() {
             <IconButton
               edge="start"
               className={classes.menuButton}
-              color="black"
               aria-label="menu"
             >
               <MenuIcon
@@ -74,17 +74,23 @@ function App() {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
+              <MenuItem component={Link} to={"/"}>
+                Home
+              </MenuItem>
               <MenuItem component={Link} to={"/products"}>
-                PRODUCTS
+                Products
               </MenuItem>
               <MenuItem component={Link} to={"/sale"}>
-                SALE!
+                Sale!
               </MenuItem>
               <MenuItem component={Link} to={"/blog"}>
-                BLOG
+                Blog
               </MenuItem>
               <MenuItem component={Link} to={"/contact"}>
-                CONTACT
+                Contact
+              </MenuItem>
+              <MenuItem component={Link} to={"/login"}>
+                Login
               </MenuItem>
             </Menu>
             <img
@@ -97,13 +103,13 @@ function App() {
             <Link to="/products" className="headmenu">
               PRODUCTS
             </Link>
-            <Link to="/products" className="headmenu">
+            <Link to="/sale" className="headmenu">
               SALE!
             </Link>
-            <Link to="/products" className="headmenu">
+            <Link to="/blog" className="headmenu">
               BLOG
             </Link>
-            <Link to="/products" className="headmenu">
+            <Link to="/contact" className="headmenu">
               CONTACT
             </Link>
 
@@ -130,6 +136,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/signup">
+            <SignUp />
           </Route>
           <Route path="/PrivacyPolicy">
             <Policy />
