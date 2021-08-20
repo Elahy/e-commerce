@@ -1,5 +1,6 @@
 import { Grid, Paper, makeStyles, TextField } from "@material-ui/core";
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Login.module.css";
 
 const useStyles = makeStyles((theme) => ({
@@ -49,8 +50,15 @@ function Login() {
                 variant="outlined"
                 className={classes.field}
               />
+              <p>
+                New user? Sign up <Link to="/Signup">Here!</Link>
+              </p>
               <br />
-              <input type="submit" value="Login"></input>
+              <input
+                type="submit"
+                value="Login"
+                className={styles.loginButton}
+              ></input>
             </form>
           </Paper>
         </Grid>

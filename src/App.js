@@ -1,9 +1,8 @@
 import "./App.css";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Link, Route, Switch } from "react-router-dom";
@@ -12,16 +11,17 @@ import ProductList from "./components/ProductList";
 import Policy from "./components/Policy";
 import Login from "./components/Login";
 import { useHistory } from "react-router";
+import { Menu, MenuItem } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    display: "inline-flex",
+    justifyContent: "space-between",
   },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   title: {
-    textDecoration: "none",
     fontStyle: "inherit",
     flexGrow: 1,
   },
@@ -30,16 +30,30 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
   const history = useHistory();
+  const [cartitems] = useState(0);
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   const handlelogin = () => {
     history.push("/login");
   };
   const handleClick = () => {
     history.push("/");
   };
+  const handleCart = () => {
+    history.push("/cart");
+  };
+
   return (
     <>
       <header className="App-header">
-        <AppBar position="static" color="transparent">
+        <AppBar position="relative" color="transparent">
           <Toolbar>
             <IconButton
               edge="start"
@@ -47,8 +61,32 @@ function App() {
               color="black"
               aria-label="menu"
             >
-              <MenuIcon />
+              <MenuIcon
+                aria-controls="simple-menu"
+                aria-haspopup="true"
+                onClick={handleMenu}
+              />
             </IconButton>
+            <Menu
+              id="simple-menu"
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
+            >
+              <MenuItem component={Link} to={"/products"}>
+                PRODUCTS
+              </MenuItem>
+              <MenuItem component={Link} to={"/sale"}>
+                SALE!
+              </MenuItem>
+              <MenuItem component={Link} to={"/blog"}>
+                BLOG
+              </MenuItem>
+              <MenuItem component={Link} to={"/contact"}>
+                CONTACT
+              </MenuItem>
+            </Menu>
             <img
               className="logo"
               src="../images/logo.png"
@@ -56,22 +94,29 @@ function App() {
               onClick={handleClick}
             />
 
-            <Typography variant="h6" className={classes.title}>
-              <Link to="/products">PRODUCTS</Link>
-            </Typography>
-            <Typography variant="h6" className={classes.title}>
-              <Link to="/">SALE!</Link>
-            </Typography>
-            <Typography variant="h6" className={classes.title}>
-              <Link to="/">BLOG</Link>
-            </Typography>
-            <Typography variant="h6" className={classes.title}>
-              <Link to="/">CONTACT</Link>
-            </Typography>
-            <img className="cartSign" src="../images/cart.png" alt="cartSign" />
-            <Button onClick={handlelogin} variant="contained" color="primary">
+            <Link to="/products" className="headmenu">
+              PRODUCTS
+            </Link>
+            <Link to="/products" className="headmenu">
+              SALE!
+            </Link>
+            <Link to="/products" className="headmenu">
+              BLOG
+            </Link>
+            <Link to="/products" className="headmenu">
+              CONTACT
+            </Link>
+
+            <img
+              className="cartSign"
+              src="../images/cart.png"
+              alt="cartSign"
+              onClick={handleCart}
+            />
+            <h3 className="cartItems">{cartitems}</h3>
+            <button onClick={handlelogin} className="loginButton">
               Login
-            </Button>
+            </button>
           </Toolbar>
         </AppBar>
       </header>

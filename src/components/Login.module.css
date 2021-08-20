@@ -1,3 +1,23 @@
 .loginpage {
   min-height: 88vh;
 }
+.loginButton {
+  cursor: pointer;
+  margin: 0 2%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #a61458;
+  opacity: 0.8;
+  text-align: center;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  color: #fff;
+  -webkit-box-shadow: 0px 1px 3.84px 0.16px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 1px 3.84px 0.16px rgba(0, 0, 0, 0.35);
+  border: none;
+}
+.loginButton:hover {
+  background-color: #b96088;
+  opacity: 0.8;
+  color: black;
+}

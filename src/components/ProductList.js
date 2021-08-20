@@ -10,12 +10,13 @@ import {
   Typography,
 } from "@material-ui/core";
 import React from "react";
+import styles from "./ProductList.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
 import { setCurrentProduct } from "../store/action";
 
 const useStyles = makeStyles({
-  root: {
+  card: {
     width: 300,
     margin: "1%",
   },
@@ -23,13 +24,12 @@ const useStyles = makeStyles({
     height: 400,
   },
   button: {
-    marginLeft: "15%",
-    marginRight: "15%",
-    color: "#04b4c4",
-    borderColor: "#04b4c4",
+    color: "#a61458",
+    borderColor: "#a61458",
+    opacity: "0.8",
   },
   detailsButton: {
-    backgroundColor: "#04b4c4",
+    backgroundColor: "#a61458",
   },
 });
 
@@ -46,13 +46,13 @@ function ProductList() {
     history.push(`/product/${e}`);
   };
   return (
-    <div>
+    <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={1} lg={1}></Grid>
-        <Grid item xs={10} lg={10}>
+        <Grid item xs={10} lg={3}>
           {productList.map((product, index) => (
-            <div key={index} className="productList">
-              <Card className={classes.root}>
+            <div key={index} className={styles.productList}>
+              <Card className={classes.card}>
                 <CardActionArea>
                   <CardMedia
                     className={classes.media}
@@ -74,7 +74,7 @@ function ProductList() {
                     color="primary"
                     className={classes.button}
                   >
-                    Share
+                    ADD TO CART
                   </Button>
                   <Button
                     onClick={() => buttonHanlder(product.id)}
