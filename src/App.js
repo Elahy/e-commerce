@@ -14,6 +14,7 @@ import { useHistory } from "react-router";
 import { Menu, MenuItem } from "@material-ui/core";
 import SignUp from "./components/SignUp";
 import ProductDetails from "./components/ProductDetails";
+import { useSelector } from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,8 +33,9 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
   const history = useHistory();
-  const [cartitems] = useState(0);
+  const { cartItems } = useSelector((store) => store);
   const [anchorEl, setAnchorEl] = useState(null);
+  console.log(cartItems, "====cartItems");
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -120,7 +122,7 @@ function App() {
               alt="cartSign"
               onClick={handleCart}
             />
-            <h3 className="cartItems">{cartitems}</h3>
+            <h3 className="cartItems">{cartItems}</h3>
             <button onClick={handlelogin} className="loginButton">
               Login
             </button>

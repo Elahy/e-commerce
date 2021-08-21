@@ -13,7 +13,7 @@ import React from "react";
 import styles from "./ProductList.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router";
-import { setCurrentProduct } from "../store/action";
+import { setCartItem } from "../store/action";
 
 const useStyles = makeStyles({
   card: {
@@ -41,9 +41,10 @@ function ProductList() {
   console.log(reduxStore.productList);
   const classes = useStyles();
   const buttonHanlder = (e) => {
-    console.log(e, "===event");
-    dispatch(setCurrentProduct(e));
     history.push(`/product/${e._id}`);
+  };
+  const cartHanlder = (e) => {
+    dispatch(setCartItem(e));
   };
   return (
     <div className={classes.root}>
@@ -73,6 +74,7 @@ function ProductList() {
                     variant="outlined"
                     color="primary"
                     className={classes.button}
+                    onClick={() => cartHanlder(product)}
                   >
                     ADD TO CART
                   </Button>
